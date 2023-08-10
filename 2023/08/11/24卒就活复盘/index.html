@@ -3,7 +3,7 @@
 <html lang="cn">
     <head>
         <meta charset="utf-8" />
-        <title>tags | 萌芽二字龙骑の小窝</title>
+        <title>24卒就活复盘 | 萌芽二字龙骑の小窝</title>
         <meta name="author" content="Nanase" />
         <meta name="description" content="🥺
 " />
@@ -29,6 +29,13 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+<script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
+
+
 
 
 
@@ -142,55 +149,81 @@
 </transition>
 
             <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-                <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        <span>
-            <a href="/tags/24%E5%8D%92/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                24卒
-            </a>
+                <div class="article">
+    <div>
+        <h1>24卒就活复盘</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/8/11
         </span>
         
-        
-        
-        <span>
-            <a href="/tags/%E5%B0%B1%E6%B4%BB/" style="background: #00a596">
+        <span class="category">
+            <a href="/categories/%E5%B7%A5%E4%BD%9C/">
                 <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                就活
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
                 工作
             </a>
         </span>
         
         
-        
-        <span>
-            <a href="/tags/%E6%97%A5%E6%9C%AC/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                日本
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/24%E5%8D%92/" style="color: #00bcd4">24卒</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%B0%B1%E6%B4%BB/" style="color: #00a596">就活</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="color: #00a596">工作</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%97%A5%E6%9C%AC/" style="color: #03a9f4">日本</a>
+            </span>
+            
         </span>
         
-        
     </div>
+    
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoClass]"
+        :disabled="cryptoStatus"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        data-encrypted="U2FsdGVkX1/ZJiWBlBTveNMy3WcCJNd5aZ57GxNphXgvYy95OTf1soYlTNBdRMBwoC4wSfkSzrHE7eIrUw91hQ=="
+        data-shasum="88436282e98fb5f31fa08412b64db904f530a567bf9456d9c47b55d06b0c737c"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus"></div>
+    </transition>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
     
 </div>
 
@@ -222,6 +255,29 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="Nanase77se/Nanase77se.github.io"
+    data-repo-id="R_kgDOKDwO7g"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOKDwO7s4CYX5S"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
         
     </body>
 </html>
